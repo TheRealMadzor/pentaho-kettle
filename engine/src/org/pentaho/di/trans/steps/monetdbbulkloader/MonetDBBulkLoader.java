@@ -504,7 +504,7 @@ public class MonetDBBulkLoader extends BaseStep implements StepInterface {
       data.out.writeLine( "" );
 
       // again...
-     /* error = data.in.waitForPrompt();
+      error = data.in.waitForPrompt();
       if ( error != null ) {
         throw new KettleException( "Error loading data: " + error );
       }
@@ -515,10 +515,10 @@ public class MonetDBBulkLoader extends BaseStep implements StepInterface {
 
         // again...
         error = data.in.waitForPrompt();
-        if ( error != null ) {
+        /*if ( error != null ) {
           throw new KettleException( "Error loading data: " + error );
-        }
-      }*/
+        }*/
+      }
 
       if ( log.isRowLevel() ) {
         logRowlevel( Const.CR );
