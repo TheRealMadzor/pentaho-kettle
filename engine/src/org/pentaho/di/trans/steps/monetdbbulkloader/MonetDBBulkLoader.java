@@ -509,16 +509,16 @@ public class MonetDBBulkLoader extends BaseStep implements StepInterface {
         throw new KettleException( "Error loading data: " + error );
       }
 
-      if ( !meta.isCompatibilityDbVersionMode() ) {
+     /* if ( !meta.isCompatibilityDbVersionMode() ) {
         // write an empty line, forces the flush of the stream
         data.out.writeLine( "" );
 
         // again...
         error = data.in.waitForPrompt();
-        /*if ( error != null ) {
+        if ( error != null ) {
           throw new KettleException( "Error loading data: " + error );
-        }*/
-      }
+        }
+      }*/
 
       if ( log.isRowLevel() ) {
         logRowlevel( Const.CR );
